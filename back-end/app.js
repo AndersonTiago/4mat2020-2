@@ -9,7 +9,10 @@ var usersRouter = require('./routes/users');
 
 const db = require('./config/database');
 //db(mongodb+srv://atbcosta:<password>@cluster0.hmiue.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority);
-
+const dbUser = process.env.DB_USER
+const dbPass = process.env.DB_PASS
+const dbName = process.env.DB_NAME
+db(`mongodb+srv://${dbUser}:${dbPass}@cluster0.hmiue.gcp.mongodb.net/${dbName}?retryWrites=true&w=majority`);
 
 var app = express();
 
