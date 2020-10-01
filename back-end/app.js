@@ -56,7 +56,7 @@ const fornecedor = require('./routes/fornecedor')
 app.use('./fornecedor', fornecedor)
 
 // Rota para Funcionario
-const funcionario = require('./routes/fornecedor')
+const funcionario = require('./routes/funcionario')
 app.use('./funcionario', funcionario)
 
 // Rota para Produto
