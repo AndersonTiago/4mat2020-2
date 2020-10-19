@@ -12,10 +12,9 @@ const esquema = mongoose.Schema({
     validade:{
         type: Date,
         required: true
-    },
-    fornecedor:{
-       fornecedor:{type: mongoose.ObjectId, ref:'Fornecedor', required: true}
-    }
+    },   
+    fornecedor:{type: mongoose.ObjectId, ref:'Fornecedor', required: true}
+
 })
 /*
     PARAMETROS DO mongoose.model()

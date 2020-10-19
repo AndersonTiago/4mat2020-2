@@ -45,26 +45,26 @@ app.use('/sala-aula', sala_aula)
 const turma = require('./routes/turma')
 app.use('/turma', turma)
 
-// ########################### Rotas do Trabalho ######################################
+// TRABALHO
 
 // Rota para Cliente
 const cliente = require('./routes/cliente')
-app.use('./cliente', cliente)
+app.use('/cliente', cliente)
 
 // Rota para Fornecedor
 const fornecedor = require('./routes/fornecedor')
-app.use('./fornecedor', fornecedor)
+app.use('/fornecedor', fornecedor)
 
 // Rota para Funcionario
 const funcionario = require('./routes/funcionario')
-app.use('./funcionario', funcionario)
+app.use('/funcionario', funcionario)
 
 // Rota para Produto
 const produto = require('./routes/produto')
-app.use('./produto', produto)
+app.use('/produto', produto)
 
 // Rota para Venda
 const venda = require('./routes/venda')
-app.use('./venda', venda)
+app.use('/venda', venda)
 
 module.exports = app;

@@ -51,7 +51,7 @@ controller.listar = async (req, res) => {
 
     try{
         //find() sem parâmetros é para trazer tudo
-        let dados = await Venda.find()
+        let dados = await Venda.find().populate('produto').populate('cliente').populate('funcionario')
         res.send(dados) // Vai com status 200: OK
     }catch(erro){
         console.error(erro)
