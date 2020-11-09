@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {​​ CursoService }​​ from './../curso.service';
+import { CursoService } from '../curso.service';
 
 @Component({
   selector: 'app-curso-list',
@@ -7,14 +7,16 @@ import {​​ CursoService }​​ from './../curso.service';
   styleUrls: ['./curso-list.component.scss']
 })
 export class CursoListComponent implements OnInit {
+
+  cursos : any = []  // Vetor vazio
   
-  cursos: any = [] // Vetor vazio
+  displayedColumns : string[] = ['nome', 'carga_horaria', 'nivel', 'valor_curso']
 
   constructor(private cursoSrv : CursoService) { }
 
   async ngOnInit() {
-      this.cursos = await this.cursoSrv.listar()
-      console.log(this.cursos)
+    this.cursos = await this.cursoSrv.listar()
+    console.log(this.cursos)
   }
 
 }
