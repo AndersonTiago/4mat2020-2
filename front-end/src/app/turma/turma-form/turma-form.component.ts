@@ -27,7 +27,7 @@ export class TurmaFormComponent implements OnInit {
       {val : 'qua' , descr: 'Quarta-feira'},
       {val : 'qui' , descr: 'Quinta-feira'},
       {val : 'sex' , descr: 'Sexta-feira'},
-      {val : 'sáb' , descr: 'Sábado'}
+      {val : 'sab' , descr: 'Sábado'}
   ]
   
   // Variáveis para armazenar as listagens das entidades relacionadas
