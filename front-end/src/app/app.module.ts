@@ -26,6 +26,12 @@ import { CursoFormComponent } from './curso/curso-form/curso-form.component';
 import { FormsModule } from '@angular/forms';
 import { TurmaListComponent } from './turma/turma-list/turma-list.component';
 import { TurmaFormComponent } from './turma/turma-form/turma-form.component';
+import { ClienteListComponent } from './cliente/cliente-list/cliente-list.component';
+import { ClienteFormComponent } from './cliente/cliente-form/cliente-form.component';
+import { FuncionarioListComponent } from './funcionario/funcionario-list/funcionario-list.component';
+import { FuncionarioFormComponent } from './funcionario/funcionario-form/funcionario-form.component';
+import { FornecedorListComponent } from './fornecedor/fornecedor-list/fornecedor-list.component';
+import { FornecedorFormComponent } from './fornecedor/fornecedor-form/fornecedor-form.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +42,13 @@ import { TurmaFormComponent } from './turma/turma-form/turma-form.component';
     CursoListComponent,
     CursoFormComponent,
     TurmaListComponent,
-    TurmaFormComponent
+    TurmaFormComponent,
+    ClienteListComponent,
+    ClienteFormComponent,
+    FuncionarioListComponent,
+    FuncionarioFormComponent,
+    FornecedorListComponent,
+    FornecedorFormComponent
   ],
   imports: [
     BrowserModule,

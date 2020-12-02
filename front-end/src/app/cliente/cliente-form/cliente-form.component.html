@@ -1,0 +1,57 @@
+<h1>{{title}}</h1>
+
+<form class="std-form" #f="ngForm" (ngSubmit)="salvar(f)">
+  <mat-form-field>
+    <mat-label>Nome do cliente</mat-label>
+    <input name="nome"[(ngModel)]="cliente.nome" matInput placeholder="Informe o nome do cliente" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>CPF</mat-label>
+    <input name="cpf"[(ngModel)]="cliente.cpf" matInput placeholder="Informe o cpf do cliente" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>RG</mat-label>
+    <input name="rg"[(ngModel)]="cliente.rg" matInput placeholder="Informe o rg do cliente" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Data de nascimento</mat-label>
+    <input matInput [matDatepicker]="dta_nascimento" [(ngModel)]="cliente.dta_nascimento" name="dta_nascimento" required>
+    <mat-datepicker-toggle matSuffix [for]="dta_nascimento"></mat-datepicker-toggle>
+    <mat-datepicker #dta_nascimento></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>CNPJ</mat-label>
+    <input name="cnpj"[(ngModel)]="cliente.cnpj" matInput placeholder="Informe o cnpj do cliente" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Telefone</mat-label>
+    <input name="telefone"[(ngModel)]="cliente.telefone" matInput placeholder="Informe o telefone do cliente" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Endereco</mat-label>
+    <input name="endereco"[(ngModel)]="cliente.endereco" matInput placeholder="Informe o endereco do cliente" required>
+  </mat-form-field>
+
+  
+
+  
+
+
+
+  <mat-toolbar class="form-buttons">
+    <mat-toolbar-row>
+      <button mat-raised-button type="submit" color="accent">
+        Salvar
+      </button>
+      <button mat-raised-button type="button" (click)="voltar(f)">
+        Voltar
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</form>

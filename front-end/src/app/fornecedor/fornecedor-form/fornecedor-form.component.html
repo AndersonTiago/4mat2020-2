@@ -1,0 +1,24 @@
+<h1>{{title}}</h1>
+
+<form class="std-form" #f="ngForm" (ngSubmit)="salvar(f)">
+  <mat-form-field>
+    <mat-label>Nome do fornecedor</mat-label>
+    <input name="nome"[(ngModel)]="fornecedor.nome" matInput placeholder="Informe o nome do fornecedor" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Produto</mat-label>
+    <input name="produto"[(ngModel)]="fornecedor.produto" matInput placeholder="Informe o produto do fornecedor" required>
+  </mat-form-field>
+
+  <mat-toolbar class="form-buttons">
+    <mat-toolbar-row>
+      <button mat-raised-button type="submit" color="accent">
+        Salvar
+      </button>
+      <button mat-raised-button type="button" (click)="voltar(f)">
+        Voltar
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</form>
