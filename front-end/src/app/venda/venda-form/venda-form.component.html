@@ -1,0 +1,56 @@
+<h1>{{ title }}</h1>
+ 
+<form class="std-form" #f="ngForm" (ngSubmit)="salvar(f)">
+ 
+  <!--mat-form-field appearance="fill"-->
+  <mat-form-field>
+    <mat-label>Codigo da Venda</mat-label>
+    <input name="nome" [(ngModel)]="venda.codigo" matInput required
+      placeholder="Informe o codigo da venda">
+  </mat-form-field>
+ 
+  <mat-form-field>
+    <mat-label>Quantidade</mat-label>
+    <input name="quantidade" [(ngModel)]="venda.quantidade" matInput required
+      placeholder="Informe a quantidade">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Produto</mat-label>
+      <mat-select name="produto" [(ngModel)]="venda.produto" required>
+        <mat-option *ngFor="let produto of produtos" [value]="produto._id">
+          {{ produto?.nome }}
+        </mat-option>
+      </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Cliente</mat-label>
+      <mat-select name="cliente" [(ngModel)]="venda.cliente" required>
+        <mat-option *ngFor="let cliente of clientes" [value]="cliente._id">
+          {{ cliente.nome }}
+        </mat-option>
+      </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Funcionarios</mat-label>
+      <mat-select name="funcionario" [(ngModel)]="venda.funcionario" required>
+        <mat-option *ngFor="let funcionario of funcionarios" [value]="funcionario._id">
+          {{ funcionario.nome }}
+        </mat-option>
+      </mat-select>
+  </mat-form-field>
+
+  <mat-toolbar class="form-buttons">
+    <mat-toolbar-row>
+      <button mat-raised-button type="submit" color="accent">
+        Salvar
+      </button>
+      <button mat-raised-button type="button" (click)="voltar(f)">
+        Voltar
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+ 
+</form>

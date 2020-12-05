@@ -32,6 +32,10 @@ import { FuncionarioListComponent } from './funcionario/funcionario-list/funcion
 import { FuncionarioFormComponent } from './funcionario/funcionario-form/funcionario-form.component';
 import { FornecedorListComponent } from './fornecedor/fornecedor-list/fornecedor-list.component';
 import { FornecedorFormComponent } from './fornecedor/fornecedor-form/fornecedor-form.component';
+import { VendaFormComponent } from './venda/venda-form/venda-form.component';
+import { VendaListComponent } from './venda/venda-list/venda-list.component';
+import { ProdutoListComponent } from './produto/produto-list/produto-list.component';
+import { ProdutoFormComponent } from './produto/produto-form/produto-form.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +52,11 @@ import { FornecedorFormComponent } from './fornecedor/fornecedor-form/fornecedor
     FuncionarioListComponent,
     FuncionarioFormComponent,
     FornecedorListComponent,
-    FornecedorFormComponent
+    FornecedorFormComponent,
+    VendaFormComponent,
+    VendaListComponent,
+    ProdutoListComponent,
+    ProdutoFormComponent
   ],
   imports: [
     BrowserModule,

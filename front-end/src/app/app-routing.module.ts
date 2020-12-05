@@ -17,6 +17,11 @@ import { FuncionarioFormComponent } from './funcionario/funcionario-form/funcion
 import { FornecedorListComponent } from './fornecedor/fornecedor-list/fornecedor-list.component';
 import { FornecedorFormComponent } from './fornecedor/fornecedor-form/fornecedor-form.component';
 
+import { VendaListComponent } from './venda/venda-list/venda-list.component';
+import { VendaFormComponent } from './venda/venda-form/venda-form.component';
+
+import { ProdutoListComponent } from './produto/produto-list/produto-list.component';
+import { ProdutoFormComponent } from './produto/produto-form/produto-form.component';
 
 const routes: Routes = [
 
@@ -40,7 +45,17 @@ const routes: Routes = [
 
     {path: 'fornecedor', component: FornecedorListComponent},
     {path: 'fornecedor/novo',component: FornecedorFormComponent},
-    {path: 'fornecedor/:id',component: FornecedorFormComponent}
+    {path: 'fornecedor/:id',component: FornecedorFormComponent},
+
+    {path: 'venda', component: VendaListComponent},
+    {path: 'venda/novo',component: VendaFormComponent},
+    {path: 'venda/:id',component: VendaFormComponent},
+
+    {path: 'produto', component: ProdutoListComponent},
+    {path: 'produto/novo',component: ProdutoFormComponent},
+    {path: 'produto/:id',component: ProdutoFormComponent}
+
+
 
 ];
 
